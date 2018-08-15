@@ -1,34 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/section_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="Section Name" />
 
-        <TextView
-            android:text="Section Name"
-            android:id="@+id/section_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1" />
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section_name"
+        android:maxLines="1"
+        android:text="News Tittle" />
 
-        <TextView
-            android:text="News Tittle"
-            android:id="@+id/news_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/section_name"
-            android:maxLines="1" />
-
-        <TextView
-            android:text="Author Name"
-            android:id="@+id/author_nane"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/section_name"
-            android:maxLines="1" />
-    </RelativeLayout>
-</ListView>
+    <TextView
+        android:id="@+id/author_nane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/section_name"
+        android:maxLines="1"
+        android:text="Author Name" />
+</RelativeLayout>
